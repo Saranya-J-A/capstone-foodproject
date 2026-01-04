@@ -21,7 +21,7 @@ const register = async (req, res) => {
     res.status(201).cookie('token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'PRODUCTION',
-      sameSite: 'Strict',
+      sameSite: 'None',
       maxAge: 60 * 60 * 1000,
     }).json({ message: 'User registered', user: { id: user._id, name: user.name, email: user.email, phone: user.phone } });
   } catch (error) {

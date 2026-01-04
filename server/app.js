@@ -11,7 +11,7 @@ connectDB();
 
 // CORS
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://capstone-foodproject-2.onrender.com/api",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
