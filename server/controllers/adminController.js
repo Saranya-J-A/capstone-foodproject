@@ -5,8 +5,8 @@ const generateToken = require('../utils/generateToken');
 // Cookie options (safe for localhost)
 const cookieOptions = {
   httpOnly: true,
-  secure: false,            // must be false for localhost
-  sameSite: "lax",          // allow cross-origin cookies for Vite
+  secure: true,            // must be false for localhost
+  sameSite: "none",          // allow cross-origin cookies for Vite
   maxAge: 60 * 60 * 1000,   // 1 hour
 };
 
